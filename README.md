@@ -18,7 +18,9 @@ Data used for the analysis was taken from [1]. In this project, there were five 
 
 # 1. Complete processing WF
 
+Complete processing WF is shown on Figure 1.
 
+![WF]()
 
 **Figure 1: Complete processing WF**
 
@@ -44,7 +46,7 @@ This allowed the model to function, though it was likely very conservative with 
 
 After performing Variance stabilizing Transformation (VST) to account for heteroskedastic nature of RNA-seq data, the PCA plot revealed that the WT cell populations, that were created using different methods, are pulling away from each other and KD/OE cell cultures (see Figure 2):
 
-
+![PCA](PCA_plot.png)
 
 **Figure 2: PCA plot**
 
