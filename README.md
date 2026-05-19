@@ -127,7 +127,7 @@ For testing the gene signature agains TCGA database, the TCGA-SKCM (Skin Cutaneo
 
 In order to perform survival analysis, the scores obtained were attached to clinical data. To perform survival plot, median split on all samples was used. The survival plot is shown on the Figure 4.
 
-![Survivability](Images/Survival_validation_of_Mouse_HIF-stem_ signature.png)
+![Survivability](Images/Survival_validation_of_Mouse_HIF-stem_signature.png)
 
 **Figure 4: Survival plot**
 
