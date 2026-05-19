@@ -66,12 +66,11 @@ In this study, there are following WT samples:<br>
 
 Following conclussions can be made based on this PCA plot: <br>
 
-(1) WT1 (3D Static suspension) & WT2 (3D Dynamic suspension)<br>
-These cell cultures are clustered together on the left, which suggests that the transition from static 3D to dynamic suspension (in this specific dataset)<br> 
-had a much smaller impact on the transcriptome than the viral transduction/selection process<br>
-(2) WT3 (shControl)<br>
+ > (1) WT1 (3D Static suspension) & WT2 (3D Dynamic suspension)<br>
+These cell cultures are clustered together on the left, which suggests that the transition from static 3D to dynamic suspension (in this specific dataset) had a much smaller impact on the transcriptome than the viral transduction/selection process<br>
+> (2) WT3 (shControl)<br>
 WT3 is "Wild Type" in the sense that it isn't knocked down, but it likely went through the **shRNA delivery process** (likely lentivirus/lipofection and selection). Here it is shifted drastically on **PC2**<br>
-(3) KD & OE<br>
+> (3) KD & OE<br>
 These are shifted along PC1 relative to the "shControl" baseline.<br>
 
 *Conclussion*
