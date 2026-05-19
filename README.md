@@ -79,17 +79,17 @@ This setup also implies that we are in fact dealing with two independent experim
 *Conclusion*<br>
 A standard DESeq2 workflow that calculates dispersion can not be used due to the lack of replicates.<br>
 This means that the focus of analysis should move from Statistical Discovery to Pattern Matching with the final aim of building set of genes for finding a signature in the TCGA.<br>
-<br>
+
 ## Calculating the fold change
-<br>
-Instead of looking for statistically significant differentially expressed genes, we should be looking for **consistently ranked** genes. The approach taken is:<br>
+
+Instead of looking for statistically significant differentially expressed genes, we should be looking for consistently ranked genes. The approach taken is:<br>
 >  1.  Normalize the count matrix to TPM --> This accounts for gene length and sequencing depth<br>
 >  2.  Calculate the delta (FC) --> Find genes where the "dosage" of HIF-1α perfectly matches the expression: KD < WT3 < OE.<br>
 >  3.  The Intersection Filter:<br>
   >  -   Find the top variable genes for HIF-1α stemmness factor (OE vs KD vs WT3)
   >  -   Find the top variable genes related with Physical Stress (WT2 vs WT1)
 
-The intersection of these two lists is **HIF Stemness Signature**<br>
+The intersection of these two lists is HIF Stemness Signature<br>
 
 Based on these findings, it is possible to use the standard way to validate experimental signatures on patient survival using the following steps:<br>
  - Compute a signature from experimental data (HIF Stemness Signature)<br>
@@ -98,9 +98,9 @@ Based on these findings, it is possible to use the standard way to validate expe
  - Build a signature score per TCGA sample by applying Signature gene set to a client TCGA expression matrix (compute z-score as mean(log2(TPM+1))<br>
  - Match TCGA expression samples to clinical data<br>
  - Run Kaplan–Meier / Cox using the TCGA samples grouped by your signature (High vs Low) or using the signature score as continuous predictor.<br>
-<br>
+
 These procedures are described in the following sections.<br>
-<br>
+
 Heatmap of stemmness signature (see Figure 3) provides visualization of the signature strength and shows the consistency of expressed genes across the 5 samples.<br>
 
 ![Heat map](Images/Heatmap_HIF_Stemness_signature.png)
@@ -143,7 +143,7 @@ The survival plot is shown on the Figure 4.
 Mouse-derived gene signature was succesfuly evaluated against a large human cohort.<br>
 Statistical Significance (p = 0.033) obtained in the Kaplan-Meier plot is below the standard 0.05 threshold.<br>
 
-*Clinical Relevance*<br>
+**Clinical Relevance**<br>
 The "High Signature" (Yellow) group consistently maintains a higher survival probability than the "Low Signature" (Blue) group over the entire study period.<br>
 This suggests that this HIF-1α signature, obtained using a murine-derived physiology, defines a less-aggressive phenotypic subgroup in human melanoma.<br>
 
