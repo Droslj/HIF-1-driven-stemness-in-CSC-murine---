@@ -66,23 +66,20 @@ In this study, there are following WT samples:<br>
 
 Following conclussions can be made based on this PCA plot: <br>
 
- > (1) WT1 (3D Static suspension) & WT2 (3D Dynamic suspension)<br>
-These cell cultures are clustered together on the left, which suggests that the transition from static 3D to dynamic suspension (in this specific dataset) had a much smaller impact on the transcriptome than the viral transduction/selection process<br>
-> (2) WT3 (shControl)<br>
-WT3 is "Wild Type" in the sense that it isn't knocked down, but it likely went through the **shRNA delivery process** (likely lentivirus/lipofection and selection). Here it is shifted drastically on **PC2**<br>
-> (3) KD & OE<br>
-These are shifted along PC1 relative to the "shControl" baseline.<br>
+ > (1) WT1 (3D Static suspension) & WT2 (3D Dynamic suspension) --> Transition from static to dynamic suspension had a smaller impact on the transcriptome than the viral transduction/selection process<br>
+ > (2) WT3 (shControl) --> WT3 subjected to viral transduction/selection process<br>
+ > (3) KD & OE --> These are shifted along PC1 relative to the "shControl" baseline.<br>
 
-*Conclussion*
-Gene expression on KD cell culture should not be compared directly to WT1 or WT2, "shControl" (WT3) is the only valid baseline for the HIF-1α manipulation, as it accounts for the stress of transduction.
+*Conclussion*<br>
+Gene expression on KD cell culture should not be compared directly to WT1 or WT2, "shControl" (WT3) is the only valid baseline for the HIF-1α manipulation, as it accounts for the stress of transduction.<br>
 
 This setup also implies that we are in fact dealing with two independent experiments: <br>
  > Experiment A --> How does physical stress in the tumor microenvironment (Dynamic Culture) affect the stemness (HIF-1α expression) compared to a standard static 3D culture (WT1, WT2)<br>
  > Experiment B --> How does changing the HIF-1α expression (upregulation OE using plasmids/viral vectors vs. KD using shRNA) affect the stemmness (OE vs KD vs WT3).<br>
 <br>
-*Conclusion*
-A standard DESeq2 workflow that calculates **dispersion** (the "noise" level of a gene) can not be used due to the lack of replicates.<br>
-This means that the focus of analysis should move from "Statistical Discovery" to "Pattern Matching" with the final aim of building set of genes for finding a signature in the TCGA.<br>
+*Conclusion*<br>
+A standard DESeq2 workflow that calculates dispersion can not be used due to the lack of replicates.<br>
+This means that the focus of analysis should move from Statistical Discovery to Pattern Matching with the final aim of building set of genes for finding a signature in the TCGA.<br>
 <br>
 ## Calculating the fold change
 <br>
