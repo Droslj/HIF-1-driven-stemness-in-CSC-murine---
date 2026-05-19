@@ -112,13 +112,12 @@ For Gene signature obtained in the previous step (Phase I) to be used in subsequ
 
 After conversion, some of the genes are lost due to the fact that they are missing human orthologs. The table of significant markers for HIF-1α signature are shown in the Table 1. 
 
-
+![Significant markers](Images/final_list.png)
 
 **Table 1: Significant markers - human orthologs**
 
-
-
-
+Final list contains some genes that are relevant for this process (e.g. BNIP3, CD274 (PD-L1), DNAJB6, TP53INP1 etc.). 
+This proves that the assay was able to capture HIF-1α related signaling, even in the absence of biological replicates and statistically significant genes.
 
 ## 3. Phase III - Human cohort scoring
 
@@ -128,7 +127,7 @@ For testing the gene signature agains TCGA database, the TCGA-SKCM (Skin Cutaneo
 
 In order to perform survival analysis, the scores obtained were attached to clinical data. To perform survival plot, median split on all samples was used. The survival plot is shown on the Figure 4.
 
-
+![Survivability](Images/Survival_validation_of_Mouse_HIF-stem_ signature.png)
 
 **Figure 4: Survival plot**
 
