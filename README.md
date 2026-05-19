@@ -65,10 +65,9 @@ In this study, there are following WT samples:<br>
 ## Breakdown of PCA with Metadata
 
 Following conclussions can be made based on this PCA plot: <br>
-
- > (1) WT1 (3D Static suspension) & WT2 (3D Dynamic suspension) --> Transition from static to dynamic suspension had a smaller impact on the transcriptome than the viral transduction/selection process<br>
- > (2) WT3 (shControl) --> WT3 subjected to viral transduction/selection process<br>
- > (3) KD & OE --> These are shifted along PC1 relative to the "shControl" baseline.<br>
+ - WT1 (3D Static suspension) & WT2 (3D Dynamic suspension) --> Transition from static to dynamic suspension had a smaller impact on the transcriptome than the viral transduction/selection process
+ - WT3 (shControl) --> WT3 subjected to viral transduction/selection process
+ - KD & OE --> These are shifted along PC1 relative to the "shControl" baseline.
 
 *Conclussion*<br>
 Gene expression on KD cell culture should not be compared directly to WT1 or WT2, "shControl" (WT3) is the only valid baseline for the HIF-1α manipulation, as it accounts for the stress of transduction.<br>
