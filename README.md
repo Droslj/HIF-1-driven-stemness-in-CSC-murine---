@@ -82,11 +82,11 @@ This means that the focus of analysis should move from "Statistical Discovery" t
 ## Calculating the fold change
 
 Instead of looking for statistically significant differentially expressed genes, we should be looking for **consistently ranked** genes. The approach taken is:
-  1.  Normalize the count matrix to TPM --> This accounts for gene length and sequencing depth.
-  2.  Calculate the delta (FC) --> Find genes where the "dosage" of HIF-1α perfectly matches the expression: KD < WT3 < OE.
-  3.  The Intersection Filter:
-    -   Find the top variable genes for HIF-1α stemmness factor (OE vs KD vs WT3)
-    -   Find the top variable genes related with Physical Stress (WT2 vs WT1)
+>  1.  Normalize the count matrix to TPM --> This accounts for gene length and sequencing depth.
+>  2.  Calculate the delta (FC) --> Find genes where the "dosage" of HIF-1α perfectly matches the expression: KD < WT3 < OE.
+>  3.  The Intersection Filter:
+  >  -   Find the top variable genes for HIF-1α stemmness factor (OE vs KD vs WT3)
+  >  -   Find the top variable genes related with Physical Stress (WT2 vs WT1)
 
 The intersection of these two lists is **HIF Stemness Signature**
 
