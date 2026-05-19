@@ -30,27 +30,27 @@ Data used in this study is RNA-seq, so appropriate WF was created. The processin
  - Quality control (FastQC/MultiQC)
  - Adapter trimming (fastp)
  - Mapping to reference (STAR)
- - Creation of count matrices (featureCOunt)
+ - Creation of count matrices (featureCount)
  - Differential expression analysis (DESeq2).
 
-Based on libraries obtained in this project, following samples were used in the DESeq2 analysis:
- - WT cell populations created different methods
+Based on libraries obtained in this project, following samples were used in the DESeq2 analysis:<br>
+ - WT cell populations (created using different methods)
  - OE cell populations
  - KD cell populations.
 
 DESeq2 analysis performed was successful despite limited number of replicate, which is sometimes common (e.g. when using public data or difficult enrichment protocols).
 
 **Explanation**<br>
-Because the DESeq2 was setup with 3 **WT** samples, their variance was used to estimate a "global" dispersion.<br>
-This allowed the model to function, though it was likely very conservative with p-value assignments for the **KD** and **OE** groups<br>
+Because the DESeq2 was setup with 3 WT samples, their variance was used to estimate a global dispersion.<br>
+This allowed the model to function, although the p-value assignments for the KD and OE groups were not accurate.<br>
 
-After performing Variance stabilizing Transformation (VST) to account for heteroskedastic nature of RNA-seq data, the PCA plot revealed that the WT cell populations, that were created using different methods, are pulling away from each other and KD/OE cell cultures (see Figure 2):
+After performing Variance stabilizing Transformation (VST) to account for heteroskedastic nature of RNA-seq data, the PCA plot revealed that the WT cell populations, that were created using different methods, are pulling away from each other and KD/OE cell cultures (see Figure 2):<br>
 
 ![PCA plot](Images/PCA_plot.png)
 
 **Figure 2: PCA plot**
 
-Because of that situation, it was important to discover which WT cell type is which in the plot. This was made using enhanced PCA plot (Figure 3).
+Because of that situation, it was important to identify which WT cell type is which in the plot. This was made using enhanced PCA plot (Figure 3).
 
 ![PCA plot](Images/PCA_plot_enh.png)
 
@@ -61,12 +61,18 @@ In this study, there are following WT samples:<br>
  - WT2 = dynamic suspension culture (SRR37746878)<br>
  - WT3 = shControl (SRR37746876).<br>
 <br>
-### Breakdown of PCA with Metadata
-<br>
+
+## Breakdown of PCA with Metadata
+
 Following conclussions can be made based on this PCA plot: <br>
- - WT1 (3D Static suspension) & WT2 (3D Dynamic suspension) --> These cell cultures are clustered together on the left, which suggests that the transition from static 3D to dynamic suspension (in this specific dataset) had a much smaller impact on the transcriptome than the viral transduction/selection process<br>
- - WT3 (shControl) --> WT3 is "Wild Type" in the sense that it isn't knocked down, but it likely went through the **shRNA delivery process** (likely lentivirus/lipofection and selection). Here it is shifted drastically on **PC2**<br>
- - KD & OE --> These are shifted along **PC1** relative to the "shControl" baseline.<br>
+
+(1) WT1 (3D Static suspension) & WT2 (3D Dynamic suspension)<br>
+These cell cultures are clustered together on the left, which suggests that the transition from static 3D to dynamic suspension (in this specific dataset)<br> 
+had a much smaller impact on the transcriptome than the viral transduction/selection process<br>
+(2) WT3 (shControl)<br>
+WT3 is "Wild Type" in the sense that it isn't knocked down, but it likely went through the **shRNA delivery process** (likely lentivirus/lipofection and selection). Here it is shifted drastically on **PC2**<br>
+(3) KD & OE<br>
+These are shifted along PC1 relative to the "shControl" baseline.<br>
 
 *Conclussion*
 Gene expression on KD cell culture should not be compared directly to WT1 or WT2, "shControl" (WT3) is the only valid baseline for the HIF-1α manipulation, as it accounts for the stress of transduction.
