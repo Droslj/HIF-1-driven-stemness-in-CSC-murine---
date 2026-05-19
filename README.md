@@ -69,11 +69,11 @@ Following conclussions can be made based on this PCA plot: <br>
  - KD & OE --> These are shifted along **PC1** relative to the "shControl" baseline.<br>
 
 *Conclussion*
-Gene expression on **KD** cell culture should not be compared directly to **WT1 or WT2**, "shControl" (WT3) is the only valid baseline for the HIF-1α manipulation, as it accounts for the stress of transduction.
+Gene expression on KD cell culture should not be compared directly to WT1 or WT2, "shControl" (WT3) is the only valid baseline for the HIF-1α manipulation, as it accounts for the stress of transduction.
 
 This setup also implies that we are in fact dealing with two independent experiments: <br>
- > **Experiment A** --> How does physical stress in the tumor microenvironment (Dynamic Culture) affect the stemness (HIF-1α expression) compared to a standard static 3D culture (WT1, WT2)<br>
- > **Experiment B** --> How does changing the HIF-1α expression (upregulation OE using plasmids/viral vectors vs. KD using shRNA) affect the stemmness (OE vs KD vs WT3).<br>
+ > Experiment A --> How does physical stress in the tumor microenvironment (Dynamic Culture) affect the stemness (HIF-1α expression) compared to a standard static 3D culture (WT1, WT2)<br>
+ > Experiment B --> How does changing the HIF-1α expression (upregulation OE using plasmids/viral vectors vs. KD using shRNA) affect the stemmness (OE vs KD vs WT3).<br>
 <br>
 *Conclusion*
 A standard DESeq2 workflow that calculates **dispersion** (the "noise" level of a gene) can not be used due to the lack of replicates.<br>
