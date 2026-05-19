@@ -64,9 +64,9 @@ In this study, there are following WT samples:<br>
 ### Breakdown of PCA with Metadata
 <br>
 Following conclussions can be made based on this PCA plot: <br>
- > WT1 (3D Static suspension) & WT2 (3D Dynamic suspension) --> These cell cultures are clustered together on the left, which suggests that the transition from static 3D to dynamic suspension (in this specific dataset) had a much smaller impact on the transcriptome than the viral transduction/selection process<br>
- > WT3 (shControl) --> WT3 is "Wild Type" in the sense that it isn't knocked down, but it likely went through the **shRNA delivery process** (likely lentivirus/lipofection and selection). Here it is shifted drastically on **PC2**<br>
- > KD & OE --> These are shifted along **PC1** relative to the "shControl" baseline.<br>
+ - WT1 (3D Static suspension) & WT2 (3D Dynamic suspension) --> These cell cultures are clustered together on the left, which suggests that the transition from static 3D to dynamic suspension (in this specific dataset) had a much smaller impact on the transcriptome than the viral transduction/selection process<br>
+ - WT3 (shControl) --> WT3 is "Wild Type" in the sense that it isn't knocked down, but it likely went through the **shRNA delivery process** (likely lentivirus/lipofection and selection). Here it is shifted drastically on **PC2**<br>
+ - KD & OE --> These are shifted along **PC1** relative to the "shControl" baseline.<br>
 
 *Conclussion*
 Gene expression on **KD** cell culture should not be compared directly to **WT1 or WT2**, "shControl" (WT3) is the only valid baseline for the HIF-1α manipulation, as it accounts for the stress of transduction.
