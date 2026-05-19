@@ -20,7 +20,7 @@ Data used for the analysis was taken from [1]. In this project, there were five 
 
 Complete processing WF is shown on Figure 1.
 
-![Complete WF](Complete_flow_uml.png)
+![Complete WF](Images/Complete_flow_uml.png)
 
 **Figure 1: Complete processing WF**
 
@@ -46,11 +46,13 @@ This allowed the model to function, though it was likely very conservative with 
 
 After performing Variance stabilizing Transformation (VST) to account for heteroskedastic nature of RNA-seq data, the PCA plot revealed that the WT cell populations, that were created using different methods, are pulling away from each other and KD/OE cell cultures (see Figure 2):
 
-![PCA plot](PCA_plot.png)
+![PCA plot](Images/PCA_plot.png)
 
 **Figure 2: PCA plot**
 
 Because of that situation, it was important to discover which WT cell type is which in the plot. This was made using enhanced PCA plot (Figure 3).
+
+![PCA plot](Images/PCA_plot_enh.png)
 
 **Figure 3: PCA plot - enhanced w/Metadata**
 
@@ -62,30 +64,31 @@ In this study, there are following WT samples:
 ### Breakdown of PCA with Metadata
 
 Following conclussions can be made based on this PCA plot:  
-**WT1 (3D Static) & WT2 (3D Dynamic)** --> These cell cultures are clustered together on the left, which suggests that the transition from static 3D to dynamic suspension (in this specific dataset) had a much smaller impact on the transcriptome than the viral transduction/selection process.
+**WT1 (3D Static) & WT2 (3D Dynamic)** --> These cell cultures are clustered together on the left, which suggests that the transition from static 3D to dynamic suspension (in this specific dataset) had a much smaller impact on the transcriptome than the viral transduction/selection process
 **WT3 (shControl)** --> WT3 is "Wild Type" in the sense that it isn't knocked down, but it likely went through the **shRNA delivery process** (likely lentivirus/lipofection and selection). Here it is shifted drastically on **PC2**.
 **KD & OE** --> These are shifted along **PC1** relative to the "shControl" baseline
+
+*Conclussion*
 Gene expression on **KD** cell culture should not be compared directly to **WT1 or WT2**, "shControl" (WT3) is the only valid baseline for the HIF-1α manipulation, as it accounts for the stress of transduction.
 
 This setup also implies that we are in fact dealing with two independent experiments: 
 **Experiment A** --> How does physical stress in the tumor microenvironment (Dynamic Culture) affect the stemness (HIF-1α expression) compared to a standard static 3D culture (WT1, WT2)
 **Experiment B** --> How does changing the HIF-1α expression (upregulation OE using plasmids/viral vectors vs. KD using shRNA) affect the stemmness (OE vs KD vs WT3).
 
-**Conclusion**
+*Conclusion*
 A standard DESeq2 workflow that calculates **dispersion** (the "noise" level of a gene) can not be used due to the lack of replicates.
 This means that the focus of analysis should move from "Statistical Discovery" to "Pattern Matching" with the final aim of building set of genes for finding a signature in the TCGA.
 
 ## Calculating the fold change
 
-Instead of looking for statistically significantly different genes, looking for **consistently ranked** genes. The approach taken is:
-1.  **Normalize the count matrix to TPM** --> This accounts for gene length and sequencing depth.
-2.  **Calculate the Delta** --> Find genes where the "dosage" of HIF-1α perfectly matches the expression: KD < WT3 < OE.
-3.  **The Intersection Filter:**
+Instead of looking for statistically significant differentially expressed genes, we should be looking for **consistently ranked** genes. The approach taken is:
+  1.  Normalize the count matrix to TPM --> This accounts for gene length and sequencing depth.
+  2.  Calculate the delta (FC) --> Find genes where the "dosage" of HIF-1α perfectly matches the expression: KD < WT3 < OE.
+  3.  The Intersection Filter:
     -   Find the top variable genes for HIF-1α stemmness factor (OE vs KD vs WT3)
     -   Find the top variable genes related with Physical Stress (WT2 vs WT1)
 
-The **intersection** of these two lists is **HIF Stemness Signature**
-
+The intersection of these two lists is **HIF Stemness Signature**
 
 Based on these findings, it is possible to use the standard way to validate experimental signatures on patient survival using the following steps:
  - Compute a signature from experimental data (HIF Stemness Signature)
@@ -97,20 +100,24 @@ Based on these findings, it is possible to use the standard way to validate expe
 
 These procedures are described in the following sections.
 
+Heatmap of stemmness signature (see Figure 3) provides visualization of the signature strength and shows the consistency of expressed genes across the 5 samples.
+
+![Heat map](Images/Heatmap_HIF_Stemness_signature.png)
+
+**Figure 3: Heatmap of HiF stemness signature (murine)**
+
 ## 2. Phase II - Translation and mapping
 
 For Gene signature obtained in the previous step (Phase I) to be used in subsequent phases of analysis, the genes need to be first translated using human --> mouse ortholog mapping and annotated. The identified Gene expression profile in a murine model leads to HIF-1α activation. In an independent human melanoma cohort (TCGA-SKCM), this signature could function as statistically significant prognostic marker. The prognostic signature obtained in this way can then be used to test survivability. 
 
+After conversion, some of the genes are lost due to the fact that they are missing human orthologs. The table of significant markers for HIF-1α signature are shown in the Table 1. 
 
-**Figure 3: Heatmap of HiF stemness signature**
 
-**Table 1: Significant markers - murine**
 
 **Table 1: Significant markers - human orthologs**
 
-### 2.1 Visualizing the Signature Strength
 
-Heatmap of stemmness signature shows the consistency of expressed genes across the 5 samples.
+
 
 
 ## 3. Phase III - Human cohort scoring
