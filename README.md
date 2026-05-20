@@ -1,10 +1,10 @@
 # HIF-1-driven-stemness-in-CSC-murine
 HIF-1α-Driven Stemness Maintenance in Cancer Stem Cells (PRJNA1442098) 
 
-Keywords:
-Hypoxic response, Stemness response, HIF-1α-Driven Stemness, CSC, TCGA, Survivability studies
+**Keywords**<br>
+Hypoxic response, Stemness signature, HIF-1α-Driven Stemness, CSC, TCGA, Survivability studies, Fluidic stress
 
-I started this project to learn more about the use of marker-based enrichment strategy (like FACS for CD133+ vs CD133- pools) for building a high-sensitivity baseline of stemness transcription factors. 
+THe goal of this project is to learn more about the use of marker-based enrichment strategy for building baseline of stemness transcription factors. 
 Complete project was planned in several phases<br>
 > (1) Upstream processing -> setting up the DEseq2 pipeline to obtain signatures specific to this process<br>
 > (2) Downstream processing -> discover the best ways to deconvolve public TCGA data using signatures<br>
@@ -58,7 +58,7 @@ Because of that situation, it was important to identify which WT cell type is wh
 
 In this study, there are following WT samples:<br>
  - WT1 = conventional three-dimensional culture (SRR37746879)<br>
- - WT2 = dynamic suspension culture (SRR37746878)<br>
+ - WT2 = dynamic(*) suspension culture (SRR37746878)<br>
  - WT3 = shControl (SRR37746876).<br>
 <br>
 
@@ -150,3 +150,8 @@ This suggests that this HIF-1α signature defines a less-aggressive phenotypic s
 
 References:
   [1] Dynamic Suspension Culture System Reveals HIF-1α-Driven Stemness Maintenance via Dual Suppression of the p53 Pathway in Cancer Stem Cells (house mouse), NCBI PRJNA1442098 
+
+
+**Notes**<br>
+(*) Dynamic suspension induces enhanced fluidic stress on tumor cells by stirring/mixing the suspension
+
