@@ -4,7 +4,7 @@ HIF-1α-Driven Stemness Maintenance in Cancer Stem Cells (PRJNA1442098)
 **Keywords**<br>
 Hypoxic response, Stemness signature, HIF-1α-Driven Stemness, CSC, TCGA, Survivability studies, Fluidic stress
 
-THe goal of this project is to learn more about the use of marker-based enrichment strategy for building baseline of stemness transcription factors. 
+The goal of this project is to learn more about the use of marker-based enrichment strategy for building baseline of stemness transcription factors. 
 Complete project was planned in several phases<br>
 > (1) Upstream processing -> setting up the DEseq2 pipeline to obtain signatures specific to this process<br>
 > (2) Downstream processing -> discover the best ways to deconvolve public TCGA data using signatures<br>
