@@ -144,8 +144,9 @@ Mouse-derived gene signature was succesfuly evaluated against a large human coho
 Statistical Significance (p = 0.033) obtained in the Kaplan-Meier plot is below the standard 0.05 threshold.<br>
 
 **Clinical Relevance**<br>
-The "High Signature" (Yellow) group consistently maintains a higher survival probability than the "Low Signature" (Blue) group over the entire study period.<br>
-This suggests that this HIF-1α signature, obtained using a murine-derived physiology, defines a less-aggressive phenotypic subgroup in human melanoma.<br>
+High Signature (Yellow) group maintains a higher survival probability than the Low Signature (Blue) group over the entire study period.<br>
+This suggests that this HIF-1α signature defines a less-aggressive phenotypic subgroup in human melanoma.<br>
+
 
 References:
   [1] Dynamic Suspension Culture System Reveals HIF-1α-Driven Stemness Maintenance via Dual Suppression of the p53 Pathway in Cancer Stem Cells (house mouse), NCBI PRJNA1442098 
