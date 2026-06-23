@@ -150,7 +150,7 @@ High Signature (Yellow) group maintains a higher survival probability than the L
 This suggests that this HIF-1α signature defines a less-aggressive phenotypic subgroup in human melanoma.<br>
 
 
-References:
+**References**<br>
   [1] Dynamic Suspension Culture System Reveals HIF-1α-Driven Stemness Maintenance via Dual Suppression of the p53 Pathway in Cancer Stem Cells (house mouse), NCBI PRJNA1442098 
 
 
