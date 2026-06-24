@@ -1,5 +1,5 @@
 # HIF-1 driven stemness in CSC (murine)
-HIF-1α-Driven Stemness Maintenance in Cancer Stem Cells (PRJNA1442098) 
+HIF-1α-Driven Stemness Maintenance in Cancer Stem Cells  
 
 **Keywords**<br>
 Hypoxic response, Stemness signature, HIF-1α-Driven Stemness, CSC, TCGA, Survivability studies, Fluidic stress
@@ -151,8 +151,8 @@ This suggests that this HIF-1α signature defines a less-aggressive phenotypic s
 
 
 **References**<br>
-  [1] Dynamic Suspension Culture System Reveals HIF-1α-Driven Stemness Maintenance via Dual Suppression of the p53 Pathway in Cancer Stem Cells (house mouse), NCBI PRJNA1442098 
-
+[1] Dynamic Suspension Culture System Reveals HIF-1α-Driven Stemness Maintenance via Dual Suppression of the p53 Pathway in Cancer Stem Cells (house mouse), NCBI PRJNA1442098<br>
+<br>
 
 **Notes**<br>
 (*) Dynamic suspension induces enhanced fluidic stress on tumor cells by stirring/mixing the suspension
